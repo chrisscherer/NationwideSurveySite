@@ -2,6 +2,6 @@
 
 This is a rough draft of a survey monkey clone done as a shadowing experience. 
 
-Tech used includes, Ruby, Ruby on Rails, javascript, Firebase, and Angular JS. Kendo JS was starting to be included but I ran out of time.
+Tech used include Ruby, Ruby on Rails, javascript, Firebase, and Angular JS. Kendo JS was starting to be included but I ran out of time.
 
 As this was a quick project meant to be about learning new technology the code is somewhat messy and could certainly use some refactoring.
