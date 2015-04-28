@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a rough draft of a survey monkey clone done as a shadowing experience. 
 
-Things you may want to cover:
+Tech used includes, Ruby, Ruby on Rails, javascript, Firebase, and Angular JS. Kendo JS was starting to be included but I ran out of time.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+As this was a quick project meant to be about learning new technology the code is somewhat messy and could certainly use some refactoring.
