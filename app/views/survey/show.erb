@@ -1,0 +1,26 @@
+<html ng-app="show-survey">
+  <head>
+  </head>
+  <body ng-controller="MyController as survey">
+    <!-- CHAT MARKUP -->
+    <h1 id="survey_title">{{survey.survey_info.title}}</h1>
+
+    <h3 id="survey_desc">{{survey.survey_info.description}}</h3>
+    <div class="show_survey_container">
+       <ul class="unstyled">
+        <li ng-repeat="question in survey.survey_info.questions">
+          <label>{{question.text}}</label>
+          <ul class="question_list" ng-if="question.answers">
+            <div class="btn-group" ng-repeat="answer in question.answers">
+              <label class="btn btn-primary" ng-model="response.answers[question.id]" ng-value="answer.text" btn-radio="answer.text">{{answer.text}}</label>
+            </div>
+          </ul>
+          <input type="text" ng-if="!question.answers" ng-model="response.answers[question.id]" placeholder="Answer the question."/>
+        </li>
+      </ul>
+    </div>
+      <form ng-submit="survey.submitResponse()">
+        <input class="btn-primary" type="submit" value="Submit your response!">
+      </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+  <head>
+  </head>
+  <body ng-controller="MyController">
+    <!-- CHAT MARKUP -->
+    <div class="new-user-container">
+      <h2>Sign Up for QuizBonobo!</h2>
+
+      <div class="example-chat-toolbar">
+        <label for="nameInput">Username:</label>
+        <input ng-model="name" type="text" id="nameInput" placeholder="enter a username...">
+      </div>
+
+      <div class="example-chat-toolbar">
+        <label for="emailInput">Email:</label>
+        <input ng-model="email" type="text" id="emailInput" placeholder="enter an email...">
+      </div>
+
+      <div class="example-chat-toolbar">
+        <label for="passwordInput">Password:</label>
+        <input ng-model="password" type="password" id="passwordInput" placeholder="enter a password...">
+      </div>
+
+      <footer>
+        <button class="btn btn-primary" ng-model="submit" ng-click="createUser($event)" type="text" id="submitUser"  placeholder="Create user account..."> Click here to create your account!  </button> 
+      </footer>
+    </div>
+  </body>
+</html>

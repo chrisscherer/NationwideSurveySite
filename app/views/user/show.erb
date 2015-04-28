@@ -1,0 +1,35 @@
+<html ng-app="profile">
+  <head>
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.common-bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.dataviz.bootstrap.min.css" />
+
+    <script src="http://cdn.kendostatic.com/2015.1.408/js/kendo.all.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.408/js/kendo.timezones.min.js"></script>
+  </head>
+  <body ng-controller="MyController as profile">
+      
+    <!-- CHAT MARKUP -->
+    <div class="show-profile-container">  
+      <ul class="unstyled">
+<!--         <li ng-repeat="survey in profile.surveys">
+          <a> {{survey.title}}</a>
+        </li> -->
+      </ul>
+    </div>
+
+    <div class="show-survey-container">
+
+      <form ng-submit="console.log(myCombo);">
+        <input class="btn-primary" type="submit" value="Submit your response!">
+      </form>
+ 
+      <input id="surveys_combo" ng-model="myCombo" placeholder="Select a survey!" />
+
+      <ul class="unstyled" ng-if="!(myCombo === 'null')">
+        <li ng-repeat="survey in profile.getSurveyFromId(myCombo);">{{survey}}</li>
+      </ul>
+    </div>
+  </body>
+</html>

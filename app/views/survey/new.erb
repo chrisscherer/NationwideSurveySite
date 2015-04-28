@@ -1,0 +1,49 @@
+<html ng-app="new-survey">
+  <head>
+  </head>
+  <body ng-controller="MyController as surveyList">
+    <!-- CHAT MARKUP -->
+    <div class="new_survey_container">
+      <h1>Create a new survey!</h1>
+
+        <input type="text" ng-model="surveyList.title" size="30" placeholder="Give it a title!">
+
+        <input type="text" ng-model="surveyList.description" size="30" placeholder="And maybe a description?">
+
+       <ul class="unstyled">
+        <li ng-repeat="question in surveyList.questions">
+          <span class="class1">Question: {{question.text}}</span>
+          <div class="btn-group">
+            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Multiple Choice'">Multiple Choice</label>
+            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Text'">Text</label>
+          </div>
+       
+          <button class="remove_question" ng-click="surveyList.removeQuestion($index);">Remove</button>
+          <ul class="unstyled">
+            <li ng-repeat="answer in surveyList.questions[$index].answers">
+              <span class="class2">{{answer.text}}</span>
+              <button class="remove_answer" ng-click="surveyList.removeAnswer(question.id, $index);">Remove</button>
+            </li>
+            <li ng-if="radioModel=='Multiple Choice'">
+              <form ng-submit="surveyList.addAnswer($index)">
+                <input type="text" ng-model="surveyList.answerText" size="30" placeholder="Add new answer here.">
+                <input class="btn-primary" type="submit" value="Add">
+              </form>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      Add a new question!
+      <form ng-submit="surveyList.addQuestion()">
+        <input type="text" ng-model="surveyList.questionText" size="30" placeholder="Add new question here.">
+        <input class="btn-primary" type="submit" value="Add">
+      </form>
+
+      <form ng-submit="surveyList.submitSurvey()">
+        <input class="btn-primary" type="submit" value="Submit your quiz!">
+      </form>
+
+    </div>
+  </body>
+</html>

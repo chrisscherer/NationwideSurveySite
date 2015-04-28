@@ -1,0 +1,15 @@
+<html ng-app="survey-index">
+  <head>
+  </head>
+  <body ng-controller="MyController as surveyList">
+    <!-- CHAT MARKUP -->
+    <div class="show_survey_container">
+       <ul class="unstyled">
+        <li ng-repeat="survey in surveyList.surveys">
+          <button class='btn btn-primary' ng-click="surveyList.showSurvey(survey.id);">{{survey.title}}</button>
+          <label> By - {{survey.author}}; {{survey.description}}</label>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

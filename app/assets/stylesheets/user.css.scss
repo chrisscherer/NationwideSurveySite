@@ -1,0 +1,30 @@
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-user-container {
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+}
+
+.new-user-container h2{
+  text-align: center;
+}
+
+.new-user-container div{
+  text-align: center;
+  padding: 5px;
+}
+
+.new-user-container footer{
+  text-align: center;
+  padding: 0 0 5px 0;
+}
+
+.show-profile-container {
+  margin-top: 10%;
+}

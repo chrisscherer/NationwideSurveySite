@@ -1,3 +1,24 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  /*background: linear-gradient(right, #D7D7D7, #C3C4BE);*/
+   /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left,#D6D6D6,#BBBCB6);
+  /* For Opera 11.1 to 12.0 */
+}
+
+img{
+  margin-left: 12.5%;
+  margin-right: auto;
+}
+
+h1{
+  margin-top: 15%;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
